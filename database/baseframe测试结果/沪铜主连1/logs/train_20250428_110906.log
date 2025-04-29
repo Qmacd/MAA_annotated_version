@@ -1,0 +1,41 @@
+2025-04-28 11:09:06,038  INFO  ARGS = {
+  "notes": "回测300股指自回归",
+  "data_path": "database/VWAP/沪铜主连.csv",
+  "output_dir": "out_put/multi",
+  "ckpt_dir": "ckpt",
+  "feature_columns": [
+    2,
+    2
+  ],
+  "target_columns": [
+    [
+      2
+    ]
+  ],
+  "start_timestamp": 31,
+  "end_timestamp": -1,
+  "window_sizes": [
+    15
+  ],
+  "N_pairs": 1,
+  "num_classes": 3,
+  "generators": [
+    "transformer"
+  ],
+  "discriminators": null,
+  "distill_epochs": 0,
+  "cross_finetune_epochs": 0,
+  "device": [
+    0
+  ],
+  "num_epochs": 10000,
+  "lr": 2e-05,
+  "batch_size": 64,
+  "train_split": 0.7,
+  "random_seed": 3407,
+  "amp_dtype": "none",
+  "mode": "train",
+  "ckpt_path": "lastest"
+}
+2025-04-28 11:10:40,929  INFO  Train Metrics for G1: MSE=138283.7327, MAE=296.0839, RMSE=371.8652, MAPE=0.4113
+2025-04-28 11:10:41,483  INFO  Test Metrics for G1: MSE=36659.9566, MAE=118.4622, RMSE=191.4679, MAPE=0.1547

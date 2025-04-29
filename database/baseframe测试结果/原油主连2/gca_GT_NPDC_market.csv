@@ -1,0 +1,2 @@
+feature_columns,target_columns,train_mse,train_mae,train_rmse,train_mape,train_mse_per_target,test_mse,test_mae,test_rmse,test_mape,test_mse_per_target
+"[2, 2]",[2],[7.657771340131842],[2.082107824265115],[2.7672678475586423],[0.3613454700812496],[array([7.65777134])],[10.013941837689398],[2.4653290182736898],[3.1644812904628457],[0.46373637640586285],[array([10.01394184])]

@@ -1,0 +1,41 @@
+2025-04-28 11:24:38,341  INFO  ARGS = {
+  "notes": "回测300股指自回归",
+  "data_path": "database/VWAP/螺纹钢主连.csv",
+  "output_dir": "out_put/multi",
+  "ckpt_dir": "ckpt",
+  "feature_columns": [
+    2,
+    2
+  ],
+  "target_columns": [
+    [
+      2
+    ]
+  ],
+  "start_timestamp": 31,
+  "end_timestamp": -1,
+  "window_sizes": [
+    15
+  ],
+  "N_pairs": 1,
+  "num_classes": 3,
+  "generators": [
+    "transformer"
+  ],
+  "discriminators": null,
+  "distill_epochs": 0,
+  "cross_finetune_epochs": 0,
+  "device": [
+    0
+  ],
+  "num_epochs": 10000,
+  "lr": 2e-05,
+  "batch_size": 64,
+  "train_split": 0.7,
+  "random_seed": 3407,
+  "amp_dtype": "none",
+  "mode": "train",
+  "ckpt_path": "lastest"
+}
+2025-04-28 11:26:41,185  INFO  Train Metrics for G1: MSE=761.6492, MAE=17.2827, RMSE=27.5980, MAPE=0.4450
+2025-04-28 11:26:42,092  INFO  Test Metrics for G1: MSE=151.3978, MAE=8.7383, RMSE=12.3044, MAPE=0.2676

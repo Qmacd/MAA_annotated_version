@@ -1,0 +1,41 @@
+2025-04-28 13:01:20,621  INFO  ARGS = {
+  "notes": "回测300股指自回归",
+  "data_path": "database/VWAP/苹果主连.csv",
+  "output_dir": "out_put/multi",
+  "ckpt_dir": "ckpt",
+  "feature_columns": [
+    2,
+    2
+  ],
+  "target_columns": [
+    [
+      2
+    ]
+  ],
+  "start_timestamp": 31,
+  "end_timestamp": -1,
+  "window_sizes": [
+    15
+  ],
+  "N_pairs": 1,
+  "num_classes": 3,
+  "generators": [
+    "transformer"
+  ],
+  "discriminators": null,
+  "distill_epochs": 0,
+  "cross_finetune_epochs": 0,
+  "device": [
+    0
+  ],
+  "num_epochs": 10000,
+  "lr": 2e-05,
+  "batch_size": 64,
+  "train_split": 0.7,
+  "random_seed": 3407,
+  "amp_dtype": "none",
+  "mode": "train",
+  "ckpt_path": "lastest"
+}
+2025-04-28 13:02:33,929  INFO  Train Metrics for G1: MSE=2540.8466, MAE=28.6478, RMSE=50.4068, MAPE=0.3255
+2025-04-28 13:02:34,502  INFO  Test Metrics for G1: MSE=1510.4098, MAE=28.6377, RMSE=38.8640, MAPE=0.3986

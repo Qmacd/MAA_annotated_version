@@ -1,0 +1,41 @@
+2025-04-28 15:36:34,884  INFO  ARGS = {
+  "notes": "回测300股指自回归",
+  "data_path": "database/VWAP/原油主连.csv",
+  "output_dir": "out_put/multi",
+  "ckpt_dir": "ckpt",
+  "feature_columns": [
+    1,
+    1
+  ],
+  "target_columns": [
+    [
+      1
+    ]
+  ],
+  "start_timestamp": 31,
+  "end_timestamp": -1,
+  "window_sizes": [
+    15
+  ],
+  "N_pairs": 1,
+  "num_classes": 3,
+  "generators": [
+    "transformer"
+  ],
+  "discriminators": null,
+  "distill_epochs": 0,
+  "cross_finetune_epochs": 0,
+  "device": [
+    0
+  ],
+  "num_epochs": 10000,
+  "lr": 2e-05,
+  "batch_size": 64,
+  "train_split": 0.7,
+  "random_seed": 3407,
+  "amp_dtype": "none",
+  "mode": "train",
+  "ckpt_path": "lastest"
+}
+2025-04-28 15:38:01,500  INFO  Train Metrics for G1: MSE=10.7244, MAE=2.3119, RMSE=3.2748, MAPE=0.3945
+2025-04-28 15:38:02,448  INFO  Test Metrics for G1: MSE=11.2142, MAE=2.4761, RMSE=3.3488, MAPE=0.4707

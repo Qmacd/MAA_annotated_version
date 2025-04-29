@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>模型训练与预测界面</title>
+  <style>
+    body { font-family: Arial; margin: 40px; }
+    label { display: block; margin-top: 20px; }
+    input[type="text"] { width: 400px; padding: 5px; }
+    button { padding: 10px 20px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>模型训练与预测平台</h1>
+
+  <!-- 模块 1: 导入训练数据路径 -->
+  <label for="train_csv">训练数据 CSV 路径:</label>
+  <input type="text" id="train_csv" placeholder="例如: /path/to/train.csv">
+
+  <!-- 模块 2: 保存模型权重路径 -->
+  <label for="save_path">模型保存路径 (.pt):</label>
+  <input type="text" id="save_path" placeholder="例如: /path/to/model.pt">
+
+  <!-- 模块 3: 开始训练按钮 -->
+  <button onclick="startTraining()">开始训练模型</button>
+
+  <!-- 模块 4: 预测部分 -->
+  <label for="predict_input">预测输入数据路径:</label>
+  <input type="text" id="predict_input" placeholder="例如: /path/to/test.csv">
+
+  <label for="predict_output">预测结果输出路径:</label>
+  <input type="text" id="predict_output" placeholder="例如: /path/to/output.csv">
+
+  <button onclick="startPrediction()">开始预测</button>
+
+  <p id="status"></p>
+
+  <script>
+    function startTraining() {
+      const trainPath = document.getElementById('train_csv').value;
+      const savePath = document.getElementById('save_path').value;
+
+      document.getElementById('status').innerText =
+        `开始训练模型...\n训练集: ${trainPath}\n保存模型到: ${savePath}`;
+
+      // 示例后端接口调用（需要根据实际后端实现进行修改）
+      // fetch('/train', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ train_csv: trainPath, save_path: savePath })
+      // });
+    }
+
+    function startPrediction() {
+      const inputPath = document.getElementById('predict_input').value;
+      const outputPath = document.getElementById('predict_output').value;
+
+      document.getElementById('status').innerText =
+        `开始预测...\n预测输入: ${inputPath}\n结果保存到: ${outputPath}`;
+
+      // 示例后端接口调用（需要根据实际后端实现进行修改）
+      // fetch('/predict', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ input_path: inputPath, output_path: outputPath })
+      // });
+    }
+  </script>
+</body>
+</html>

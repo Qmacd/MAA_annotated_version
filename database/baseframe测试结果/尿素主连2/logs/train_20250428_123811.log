@@ -1,0 +1,41 @@
+2025-04-28 12:38:11,416  INFO  ARGS = {
+  "notes": "回测300股指自回归",
+  "data_path": "database/VWAP/尿素主连.csv",
+  "output_dir": "out_put/multi",
+  "ckpt_dir": "ckpt",
+  "feature_columns": [
+    2,
+    2
+  ],
+  "target_columns": [
+    [
+      2
+    ]
+  ],
+  "start_timestamp": 31,
+  "end_timestamp": -1,
+  "window_sizes": [
+    15
+  ],
+  "N_pairs": 1,
+  "num_classes": 3,
+  "generators": [
+    "transformer"
+  ],
+  "discriminators": null,
+  "distill_epochs": 0,
+  "cross_finetune_epochs": 0,
+  "device": [
+    0
+  ],
+  "num_epochs": 10000,
+  "lr": 2e-05,
+  "batch_size": 64,
+  "train_split": 0.7,
+  "random_seed": 3407,
+  "amp_dtype": "none",
+  "mode": "train",
+  "ckpt_path": "lastest"
+}
+2025-04-28 12:39:00,345  INFO  Train Metrics for G1: MSE=947.2922, MAE=20.5026, RMSE=30.7781, MAPE=0.8375
+2025-04-28 12:39:00,891  INFO  Test Metrics for G1: MSE=211.5977, MAE=12.4130, RMSE=14.5464, MAPE=0.6714

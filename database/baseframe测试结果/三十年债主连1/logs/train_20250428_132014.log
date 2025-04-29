@@ -1,0 +1,41 @@
+2025-04-28 13:20:14,734  INFO  ARGS = {
+  "notes": "回测300股指自回归",
+  "data_path": "database/VWAP/三十年债主连.csv",
+  "output_dir": "out_put/multi",
+  "ckpt_dir": "ckpt",
+  "feature_columns": [
+    1,
+    1
+  ],
+  "target_columns": [
+    [
+      1
+    ]
+  ],
+  "start_timestamp": 31,
+  "end_timestamp": -1,
+  "window_sizes": [
+    15
+  ],
+  "N_pairs": 1,
+  "num_classes": 3,
+  "generators": [
+    "transformer"
+  ],
+  "discriminators": null,
+  "distill_epochs": 0,
+  "cross_finetune_epochs": 0,
+  "device": [
+    0
+  ],
+  "num_epochs": 10000,
+  "lr": 2e-05,
+  "batch_size": 64,
+  "train_split": 0.7,
+  "random_seed": 3407,
+  "amp_dtype": "none",
+  "mode": "train",
+  "ckpt_path": "lastest"
+}
+2025-04-28 13:26:27,640  INFO  Train Metrics for G1: MSE=0.0480, MAE=0.1852, RMSE=0.2192, MAPE=0.1821
+2025-04-28 13:26:28,172  INFO  Test Metrics for G1: MSE=2.3116, MAE=1.2409, RMSE=1.5204, MAPE=1.0454
