@@ -1,1 +1,33 @@
-This is the detailed explanation version of the MAA code, which generally includes basic code annotations and principle explanations.
+
+# MAA 代码使用指南
+
+## 介绍
+
+MAA代码分为两个主要模块：**baseframe** 和 **MAA (multi_gan_adversarial)**。下面将详细介绍如何在这两个框架下运行您的模型。
+
+## 1. 测试 Baseframe 框架
+
+如果您希望测试 **baseframe** 框架，请按照以下步骤操作：
+
+### 步骤 1: 数据准备
+将您的数据文件（通常为 CSV 格式）放置在 `database` 文件夹对应的路径下。
+
+### 步骤 2: 设置超参数
+在 `run_baseframe.py` 文件中设置相应的超参数。
+
+### 步骤 3: 执行模型
+运行 `run_baseframe.py` 脚本。过程中的分析结果和预测结果将保存在 `output` 文件夹中。
+
+## 2. 测试 MAA 框架
+
+如果您希望测试 **MAA** 框架，请按照以下步骤操作：
+
+### 步骤 1: 数据准备
+将您的数据文件（通常为 CSV 格式）放置在 `database` 文件夹对应的路径下。
+
+### 步骤 2: 设置超参数
+在 `run_multi_gan.py` 文件中设置相应的超参数。
+
+### 步骤 3: 执行模型
+运行 `run_multi_gan.py` 脚本。过程中的分析结果和预测结果将保存在 `output` 文件夹中。
+
